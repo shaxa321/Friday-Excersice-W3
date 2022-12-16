@@ -413,13 +413,10 @@ console.log(alumn);
 console.log(deleteProp(alumn,ex11string));
 
 /* ESERCIZIO 12 !!!
-  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito. 
 */
 
-console.log("EX 12");
-const newestMovie=function(){
 
-}
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
@@ -483,25 +480,60 @@ console.log(sumAllTheYears());
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
-/*console.log("EX 17");
+console.log("EX 17");
 const searchByTitle=function(str){
 
   const moviesbytitle=[];
-  for(i=0;i<movies.length;i++){
-    if(str===movies[i].Title){
+  for(i=0;i<movies.length;i++)
+ {
+    if(movies[i].Title.includes(str)){
+
+      moviesbytitle.push(movies[i]);
     }
   }
-}*/
+
+  return moviesbytitle;
+}
+const ex17title="Avengers";
+console.log(searchByTitle(ex17title));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
-/* ESERCIZIO 19
+const searchAndDivide=function(str){
+  
+  moviesDivide={
+    match:[],
+    unmatch:[],
+  }
+
+  for(i=0;i<movies.length;i++)
+  {
+     if(movies[i].Title.includes(str)){
+ 
+       moviesDivide.match.push(movies[i]);
+     }else
+     moviesDivide.unmatch.push(movies[i]);
+   }
+ 
+   return moviesDivide;
+
+}
+const ex18title="Avengers";
+console.log(searchAndDivide(ex18title));
+
+/* ESERCIZIO 19 COMPLETATO
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
-
+console.log("EX 19");
+const removeIndex=function(n1){
+  movies.splice(n1,1);
+  return movies;
+}
+ex19n1=2;
+console.log(removeIndex(ex19n1));
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
@@ -546,6 +578,30 @@ const searchByTitle=function(str){
   ***
 
 */
+console.log("EX 27");
+const stampaNAsterischi=function(n){
+  let stringAsterischi=""
+  for(j=0;j<n;j++){
+
+  
+  stringAsterischi=stringAsterischi.concat("*");
+  
+}
+return stringAsterischi;
+}
+const halfTree=function(n){
+
+for(i=1;i<=n;i++){
+  
+  console.log(stampaNAsterischi(i));
+}
+
+
+
+
+}
+let ex27num=10;
+halfTree(ex27num);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -558,6 +614,8 @@ const searchByTitle=function(str){
   *****
 
 */
+console.log("EX 28");
+
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
@@ -565,3 +623,37 @@ const searchByTitle=function(str){
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
+/*console.log("EX 12");
+const newestMovie=function(){
+ const newmovies=[]; // COMMENTO BY SHAHRUZ IL FILM O I FILM SE SONO IN PIU CHE HANNO LA STESSA DATA 
+ for(i=0;i<movies.length;i++){
+  newmovies.push(movies[i]);
+ } 
+ console.log(newmovies);
+
+ for(i=0;i<movies.length-1;i++){
+  console.log("i",i,"i+1",i+1);
+ if((+newmovies[i+1].Year)<(+newmovies[i].Year)){
+  console.log("CIAONEEEEE")
+  console.log(newmovies[i+1],"<",newmovies[i]);
+  newmovies.splice(i+1,1);
+  i=0;
+  console.log(newmovies);
+ 
+ }
+}
+ /*while(j<newmovies.length){
+  console.log("for eseguito");
+  if((+newmovies[j+1].Year)<(+newmovies[j].Year)){
+    console.log("if eseguito"); 
+    newmovies.splice((i+1),1);
+    console.log(newestMovie());
+    j=0;
+  }
+ }
+ j++;*/ 
+ //return(newmovies);
+ 
+
+//}
+//newestMovie();*
