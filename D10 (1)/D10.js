@@ -613,14 +613,54 @@ halfTree(ex27num);
    ***
   *****
 
+  
 */
 console.log("EX 28");
+const stampaNAsterischiTree=function(currentlevel,num){
+  let stringAsterischi=""
+  let numSpace=num;
+  
+  for(j=0;j<numSpace;j++){
+    stringAsterischi=stringAsterischi.concat(" ")
+  }
 
+  
+
+  for(j=0;j<currentlevel;j++){
+    
+  stringAsterischi=stringAsterischi.concat("**");
+
+}
+
+  
+
+return stringAsterischi
+}
+
+
+const Tree=function(n){
+space=n;
+for(i=1;i<=n;i++){
+  
+  console.log(stampaNAsterischiTree(i,space));
+  space=space-1;
+}
+
+
+
+
+}
+let ex28num=10;
+Tree(ex28num);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
+/*   *
+    ***
+   *****
+  *******
+ *********/
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 /*console.log("EX 12");
