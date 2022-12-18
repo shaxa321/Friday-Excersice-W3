@@ -270,7 +270,7 @@ const onlyLetters=function(str){
   const result=convArray.join("");
   return result;
 }
-const ex5str="abcdefghi I have  4 dogs. I like the number 10, my grandmother is 178.45 cm, my phone number is +391234567890 prova prova"
+const ex5str=" I have  4 dogs. I like the number 10, my grandmother is 178.45 cm, my phone number is +391234567890 prova prova"
 console.log(ex5str);
 console.log(onlyLetters(ex5str));
 
@@ -536,38 +536,108 @@ ex19n1=2;
 console.log(removeIndex(ex19n1));
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
-/* ESERCIZIO 20
-  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
+/* ESERCIZIO 20 //FUNZIONA E CONLCUSO
+  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina. 
 */
+console.log("EX 20");
+const selectContainer=function(){
+  const container=document.getElementById("container"); //PRIMO METODO
+  //const container=document.querySelector("#container"); //SECONDO METODO
+  container.style.border="1px solid black"; //ESEMPIO PER VEDERE SE FUNZIONA
+ 
+}
 
-
-/* ESERCIZIO 21
+selectContainer();
+/* ESERCIZIO 21 //FUNZIONA e CONLCUSO
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+  console.log("EX 21");
+  const selectAllTd=function(){
+    const tdCollection=document.querySelectorAll("td") // RITORNA UNA COLLEZZIONE DI TD/ UNA COLLEZZIONE é un oggetto simile all'Array
+    tdCollection.forEach(element => { //IN QUESTO MODO POSSIAMO SELEZIONARE OGNI ELEMENTO "td" ALL'INTERNO DELLA PAGINA E APPLICARE
+                                      //AD ESEMPIO UNO STILE
+    element.style.color= "green"; //ESEMPIO PER VEDERE SE FUNZIONA
+      
+    });
+  }
+  selectAllTd();
+
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+console.log("EX 22");
+const printTextTd=function(){
+  const tdCollection=document.querySelectorAll("td");
+  /*tdCollection.forEach(function(element){           //è possibile fare la stessa cosa anche con forEeach
+    console.log(element.innerText);
+  });*/
+  
+  for(i=0;i<tdCollection.length;i++){                 //CICLO FOR
+    console.log(tdCollection[i].innerText);
+  }
+}
+printTextTd();
 
-/* ESERCIZIO 23
+/* ESERCIZIO 23 COMPLETATO E FUNZIONA
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+console.log("EX 23")
+  const AddBackgroundColorUrls=function(){
+    const urlsCollection=document.querySelectorAll("a");
+    urlsCollection.forEach(url =>{
+      url.style.backgroundColor="red";
+    })
+    
+  }
+  AddBackgroundColorUrls();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+const AddLi=function(){
+  const myList=document.querySelector("#myList");
+  myUl=document.createElement("li");
+  myUl.innerText="CREATO CON JAVASCRIPT"
+  myList.appendChild(myUl);
+}
+
+AddLi();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+console.log("EX 25");
+const DeleteAllLis=function(){
+  const myList=document.querySelector("#myList");
+  const myUls=myList.querySelectorAll("li");
+  
+  myUls.forEach(ul =>{
+    ul.remove();
+  })
+
+
+}
+DeleteAllLis();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+console.log("EX 26"); //FUNZIONA E CONCLUSO
+  const addClassTr=function(){
+    const trCollection=document.querySelectorAll("tr") 
+    trCollection.forEach(element => { 
+    element.classList.add("test"); 
+      
+    });
+  }
+  addClassTr();
+
+
 // [EXTRA] JS Avanzato
 
-/* ESERCIZIO 27
+/* ESERCIZIO 27 
   Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
 
   Esempio:
@@ -578,8 +648,8 @@ console.log(removeIndex(ex19n1));
   ***
 
 */
-console.log("EX 27");
-const stampaNAsterischi=function(n){
+console.log("EX 27"); //CONCLUSO FUNZIONA
+const stampaNAsterischiHalftree=function(n){
   let stringAsterischi=""
   for(j=0;j<n;j++){
 
@@ -593,15 +663,16 @@ const halfTree=function(n){
 
 for(i=1;i<=n;i++){
   
-  console.log(stampaNAsterischi(i));
+  console.log(stampaNAsterischiHalftree(i));
 }
 
 
 
 
 }
-let ex27num=10;
+let ex27num=5;
 halfTree(ex27num);
+console.log("Metà albero è alto ",ex27num, "righe");
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -615,52 +686,69 @@ halfTree(ex27num);
 
   
 */
-console.log("EX 28");
+console.log("EX 28"); //CONCLUSO FUNZIONA
 const stampaNAsterischiTree=function(currentlevel,num){
   let stringAsterischi=""
   let numSpace=num;
   
   for(j=0;j<numSpace;j++){
-    stringAsterischi=stringAsterischi.concat(" ")
+    stringAsterischi=stringAsterischi.concat(" ");
+  }
+
+  for(j=0;j<currentlevel;j++){
+    stringAsterischi=stringAsterischi.concat("*");
+    }
+  for(j=1;j<currentlevel;j++){
+    
+    stringAsterischi=stringAsterischi.concat("*");
+
   }
 
   
 
-  for(j=0;j<currentlevel;j++){
-    
-  stringAsterischi=stringAsterischi.concat("**");
-
-}
-
-  
-
-return stringAsterischi
+  return stringAsterischi;
 }
 
 
 const Tree=function(n){
 space=n;
-for(i=1;i<=n;i++){
+  for(i=1;i<=n;i++){
   
-  console.log(stampaNAsterischiTree(i,space));
-  space=space-1;
-}
-
-
-
+    console.log(stampaNAsterischiTree(i,space));
+    space=space-1;
+  }
 
 }
-let ex28num=10;
+let ex28num=7;
 Tree(ex28num);
+console.log("L'albero è alto ",ex28num, "righe");
 
-/* ESERCIZIO 29
+/* ESERCIZIO 29 
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-/*   *
-    ***
-   *****
-  *******
- *********/
+  console.log("EX 29") //CONCLUSO FUNZIONA
+  const isItprime =function(inputN){
+    let num=inputN-1;
+
+    while(num>1){
+      
+      if((inputN%num)===0){
+        return false;
+      }
+      else num=num-1;
+    }
+    return true;
+    
+
+  }
+  
+  const ex29num= 57139;
+  const ex29BoolPrime=isItprime(ex29num);
+  if(ex29BoolPrime)
+  console.log("Il numero inserito è ",ex29num, "esso è PRIMO");
+  else
+  console.log("Il numero inserito è ",ex29num, "esso NON è primo");
+  
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 /*console.log("EX 12");
