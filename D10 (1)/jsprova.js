@@ -1,130 +1,3 @@
-const movies = [
-  {
-    Title: 'The Lord of the Rings: The Fellowship of the Ring',
-    Year: '2001',
-    imdbID: 'tt0120737',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
-  },
-
-  {
-    Title: 'The Lord of the Rings: The Return of the King',
-    Year: '2003',
-    imdbID: 'tt0167260',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Lord of the Rings: The Two Towers',
-    Year: '2002',
-    imdbID: 'tt0167261',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lord of War',
-    Year: '2005',
-    imdbID: 'tt0399295',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lords of Dogtown',
-    Year: '2005',
-    imdbID: 'tt0355702',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Lord of the Rings',
-    Year: '1978',
-    imdbID: 'tt0077869',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lord of the Flies',
-    Year: '1990',
-    imdbID: 'tt0100054',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Lords of Salem',
-    Year: '2012',
-    imdbID: 'tt1731697',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Greystoke: The Legend of Tarzan, Lord of the Apes',
-    Year: '1984',
-    imdbID: 'tt0087365',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lord of the Flies',
-    Year: '1963',
-    imdbID: 'tt0057261',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Avengers',
-    Year: '2012',
-    imdbID: 'tt0848228',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Avengers: Infinity War',
-    Year: '2018',
-    imdbID: 'tt4154756',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Avengers: Age of Ultron',
-    Year: '2015',
-    imdbID: 'tt2395427',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Avengers: Endgame',
-    Year: '2019',
-    imdbID: 'tt4154796',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
-  },
-]
-
-
-
-/*
-REGOLE
-- Tutte le risposte devono essere scritte in JavaScript
-- Se sei in difficoltà puoi chiedere aiuto a un Teaching Assistant
-- Puoi usare Google / StackOverflow ma solo quanto ritieni di aver bisogno di qualcosa che non è stato spiegato a lezione
-- Puoi testare il tuo codice in un file separato, o de-commentando un esercizio alla volta
-- Per farlo puoi utilizzare il terminale Bash, quello di VSCode o quello del tuo sistema operativo (se utilizzi macOS o Linux)
-*/
-
 // JS Basics
 
 /* ESERCIZIO A
@@ -508,18 +381,18 @@ console.log(deleteProp(alumn,ex11string));
 */
 
 console.log("EX 12"); //CORRETTO E FUNZIONA
-const newestMovie=function(){
+const newestMovie=function(film){
  const newmovies=[]; // COMMENTO BY SHAHRUZ IL FILM O I FILM SE SONO IN PIU CHE HANNO LA STESSA DATA 
  let newestdate;
  let ex12j=0;
  let lunghezzamovie;
- for(i=0;i<movies.length;i++){
-  newmovies.push(movies[i]);
+ for(i=0;i<film.length;i++){
+  newmovies.push(film[i]);
  } 
 
 
  newestdate=+newmovies[0].Year;
- for(i=0;i<movies.length;i++){
+ for(i=0;i<newmovies.length;i++){
   if((+newmovies[i].Year)>(+newestdate)){
     newestdate=+newmovies[i].Year;
     
@@ -543,7 +416,7 @@ lunghezzamovie=newmovies.length;
  return newmovies;
 
 }
-console.log(" i film piu recenti sono",newestMovie());
+console.log(" i film piu recenti sono",newestMovie(movies));
 
 
 /* ESERCIZIO 13
@@ -592,295 +465,120 @@ const onlyInLastMillennium=function(){
 }
 console.log("I film dello scorso millenio sono questi:",onlyInLastMillennium());
 
-/* ESERCIZIO 16
-  Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
-*/
-console.log("EX 16"); //CORRETTO E FUNZIONA
-const sumAllTheYears=function(){
-  let sum=0;
-  for(i=0;i<movies.length;i++){
-    sum=+movies[i].Year+sum;
-  }
-  return sum;
-}
-console.log("La somma dell'anno in cui sono usciti i film è",sumAllTheYears());
 
-/* ESERCIZIO 17
-  Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
-*/
-console.log("EX 17");//CORRETTO E FUNZIONA
-const searchByTitle=function(str){
 
-  const moviesbytitle=[];
-  for(i=0;i<movies.length;i++)
- {
-    if(movies[i].Title.includes(str)){
-
-      moviesbytitle.push(movies[i]);
-    }
-  }
-
-  return moviesbytitle;
-}
-const ex17title="Avengers";
-console.log("I film che contengono le parole: ",ex17title," sono" ,searchByTitle(ex17title));
-
-/* ESERCIZIO 18
-  Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
-  "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
-*/
-
-console.log("EX 18");//CORRETTO E FUNZIONA
-const searchAndDivide=function(str){
+const movies = [
+    {
+      Title: 'The Lord of the Rings: The Fellowship of the Ring',
+      Year: '2001',
+      imdbID: 'tt0120737',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
+    },
   
-  moviesDivide={
-    match:[],
-    unmatch:[],
-  }
-
-  for(i=0;i<movies.length;i++)
-  {
-     if(movies[i].Title.includes(str)){
- 
-       moviesDivide.match.push(movies[i]);
-     }else
-     moviesDivide.unmatch.push(movies[i]);
-   }
- 
-   return moviesDivide;
-
-}
-const ex18title="Avengers";
-console.log("l'array fornito è ",ex18title,searchAndDivide(ex18title));
-
-/* ESERCIZIO 19 COMPLETATO
-  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
-*/
-console.log("EX 19"); //CORRETTO E FUNZIONA
-const removeIndex=function(n1){
-  movies.splice(n1,1);
-  return movies;
-
-}
-ex19n1=2;
-console.log(removeIndex(ex19n1));
-
-
-
-// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
-
-/* ESERCIZIO 20 //FUNZIONA E CONLCUSO
-  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina. 
-*/
-console.log("EX 20");
-const selectContainer=function(){
-  const container=document.getElementById("container"); //PRIMO METODO
-  //const container=document.querySelector("#container"); //SECONDO METODO
-  container.style.border="1px solid black"; //ESEMPIO PER VEDERE SE FUNZIONA
- 
-}
-
-selectContainer();
-/* ESERCIZIO 21 //FUNZIONA e CONLCUSO
-  Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
-*/
-  console.log("EX 21");
-  const selectAllTd=function(){
-    const tdCollection=document.querySelectorAll("td") // RITORNA UNA COLLEZZIONE DI TD/ UNA COLLEZZIONE é un oggetto simile all'Array
-    tdCollection.forEach(element => { //IN QUESTO MODO POSSIAMO SELEZIONARE OGNI ELEMENTO "td" ALL'INTERNO DELLA PAGINA E APPLICARE
-                                      //AD ESEMPIO UNO STILE
-    element.style.color= "green"; //ESEMPIO PER VEDERE SE FUNZIONA
-      
-    });
-  }
-  selectAllTd();
-
-
-/* ESERCIZIO 22
-  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
-*/
-console.log("EX 22");
-const printTextTd=function(){
-  const tdCollection=document.querySelectorAll("td");
-  /*tdCollection.forEach(function(element){           //è possibile fare la stessa cosa anche con forEeach
-    console.log(element.innerText);
-  });*/
-  
-  for(i=0;i<tdCollection.length;i++){                 //CICLO FOR
-    console.log(tdCollection[i].innerText);
-  }
-}
-printTextTd();
-
-/* ESERCIZIO 23 COMPLETATO E FUNZIONA
-  Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
-*/
-console.log("EX 23")
-  const AddBackgroundColorUrls=function(){
-    const urlsCollection=document.querySelectorAll("a");
-    urlsCollection.forEach(url =>{
-      url.style.backgroundColor="red";
-    })
-    
-  }
-  AddBackgroundColorUrls();
-
-/* ESERCIZIO 24
-  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
-*/
-const AddLi=function(){
-  const myList=document.querySelector("#myList");
-  myUl=document.createElement("li");
-  myUl.innerText="CREATO CON JAVASCRIPT"
-  myList.appendChild(myUl);
-}
-
-AddLi();
-
-/* ESERCIZIO 25
-  Scrivi una funzione per svuotare la lista non ordinata con id "myList".
-*/
-console.log("EX 25");
-const DeleteAllLis=function(){
-  const myList=document.querySelector("#myList");
-  const myUls=myList.querySelectorAll("li");
-  
-  myUls.forEach(ul =>{
-    ul.remove();
-  })
-
-
-}
-DeleteAllLis();
-
-/* ESERCIZIO 26
-  Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
-*/
-
-console.log("EX 26"); //FUNZIONA E CONCLUSO
-  const addClassTr=function(){
-    const trCollection=document.querySelectorAll("tr") 
-    trCollection.forEach(element => { 
-    element.classList.add("test"); 
-      
-    });
-  }
-  addClassTr();
-
-
-// [EXTRA] JS Avanzato
-
-/* ESERCIZIO 27 
-  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
-
-  Esempio:
-  halfTree(3)
-
-  *
-  **
-  ***
-
-*/
-console.log("EX 27"); //CONCLUSO FUNZIONA
-const stampaNAsterischiHalftree=function(n){
-  let stringAsterischi=""
-  for(j=0;j<n;j++){
-
-  
-  stringAsterischi=stringAsterischi.concat("*");
-  
-}
-return stringAsterischi;
-}
-const halfTree=function(n){
-
-for(i=1;i<=n;i++){
-  
-  console.log(stampaNAsterischiHalftree(i));
-}
-
-
-
-
-}
-let ex27num=5;
-halfTree(ex27num);
-console.log("Metà albero è alto ",ex27num, "righe");
-
-/* ESERCIZIO 28
-  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
-
-  Esempio:
-  tree(3)
-
-    *
-   ***
-  *****
-
-  
-*/
-console.log("EX 28"); //CONCLUSO FUNZIONA
-const stampaNAsterischiTree=function(currentlevel,num){
-  let stringAsterischi=""
-  let numSpace=num;
-  
-  for(j=0;j<numSpace;j++){
-    stringAsterischi=stringAsterischi.concat(" ");
-  }
-
-  for(j=0;j<currentlevel;j++){
-    stringAsterischi=stringAsterischi.concat("*");
-    }
-  for(j=1;j<currentlevel;j++){
-    
-    stringAsterischi=stringAsterischi.concat("*");
-
-  }
-
-  
-
-  return stringAsterischi;
-}
-
-
-const Tree=function(n){
-space=n;
-  for(i=1;i<=n;i++){
-  
-    console.log(stampaNAsterischiTree(i,space));
-    space=space-1;
-  }
-
-}
-let ex28num=7;
-Tree(ex28num);
-console.log("L'albero è alto ",ex28num, "righe");
-
-/* ESERCIZIO 29 
-  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
-*/
-  console.log("EX 29") //CONCLUSO FUNZIONA
-  const isItprime =function(inputN){
-    let num=inputN-1;
-
-    while(num>1){
-      
-      if((inputN%num)===0){
-        return false;
-      }
-      else num=num-1;
-    }
-    return true;
-    
-
-  }
-  
-  const ex29num= 57139;
-  const ex29BoolPrime=isItprime(ex29num);
-  if(ex29BoolPrime)
-  console.log("Il numero inserito è ",ex29num, "esso è PRIMO");
-  else
-  console.log("Il numero inserito è ",ex29num, "esso NON è primo");
-  
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
-
+    {
+      Title: 'The Lord of the Rings: The Return of the King',
+      Year: '2003',
+      imdbID: 'tt0167260',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+    },
+    {
+      Title: 'The Lord of the Rings: The Two Towers',
+      Year: '2002',
+      imdbID: 'tt0167261',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Lord of War',
+      Year: '2005',
+      imdbID: 'tt0399295',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Lords of Dogtown',
+      Year: '2005',
+      imdbID: 'tt0355702',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
+    },
+    {
+      Title: 'The Lord of the Rings',
+      Year: '1978',
+      imdbID: 'tt0077869',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Lord of the Flies',
+      Year: '1990',
+      imdbID: 'tt0100054',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg',
+    },
+    {
+      Title: 'The Lords of Salem',
+      Year: '2012',
+      imdbID: 'tt1731697',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Greystoke: The Legend of Tarzan, Lord of the Apes',
+      Year: '1984',
+      imdbID: 'tt0087365',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Lord of the Flies',
+      Year: '1963',
+      imdbID: 'tt0057261',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg',
+    },
+    {
+      Title: 'The Avengers',
+      Year: '2012',
+      imdbID: 'tt0848228',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Avengers: Infinity War',
+      Year: '2018',
+      imdbID: 'tt4154756',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Avengers: Age of Ultron',
+      Year: '2015',
+      imdbID: 'tt2395427',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg',
+    },
+    {
+      Title: 'Avengers: Endgame',
+      Year: '2019',
+      imdbID: 'tt4154796',
+      Type: 'movie',
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
+    },
+  ]
